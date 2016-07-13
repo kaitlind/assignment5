@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Assignment 5, Part 2 - Calculator</title>
+<script>
+   window.addEventListener('load', init(), false);
+    
+  var seven = document.getElementById('seven');
+  var eight = document.getElementById('eight');
+  var nine = document.getElementById('nine');
+  var divide = document.getElementById('divide');
+   
+  var four = document.getElementById('four');
+  var five = document.getElementById('five');
+  var six = document.getElementById('six');
+  var multiply = document.getElementById('multiply');
+   
+  var one = document.getElementById('one');
+  var two = document.getElementById('two');
+  var three = document.getElementById('three');
+  var subtract = document.getElementById('subtract');
+   
+  var zero = document.getElementById('zero');
+  var period = document.getElementById('period');
+  var add = document.getElementById('add');
+  var equal= document.getElementById('equal');
+    
+    function init(){
+        seven.addEventListener('click', enter(this.value), false);
+        eight.addEventListener('click', enter(this.value), false);
+        nine.addEventListener('click', enter(this.value), false);
+        divide.addEventListener('click', enter(this.value), false);
+        
+        four.addEventListener('click', enter(this.value), false);
+        five.addEventListener('click', enter(this.value), false);
+        six.addEventListener('click', enter(this.value), false);
+        multiply.addEventListener('click', enter(this.value), false);
+        
+        one.addEventListener('click', enter(this.value), false);
+        two.addEventListener('click', enter(this.value), false);
+        three.addEventListener('click', enter(this.value), false);
+        subtract.addEventListener('click', enter(this.value), false);
+        
+        zero.addEventListener('click', enter(this.value), false);
+        period.addEventListener('click', enter(this.value), false);
+        add.addEventListener('click', enter(this.value), false);
+        equal.addEventListener('click', calculate(), false);
+    }
+    
+    function enter(val){
+        var result = document.getElementById('result');
+        result += val;
+    }
+    function calculate(){
+        var result = document.getElementById('result');
+        console.log(eval(result));
+    }
+
+</script>
+</head>
+
+<body>
+	<input type="text" readonly id="result">
+    <br>
+    <input type="button" id="seven" value="7">
+    <input type="button" id="eight" value="8">
+    <input type="button" id="nine" value="9">
+    <input type="button" id="divide" value="/">
+    <br>
+    <input type="button" id="four" value="4">
+    <input type="button" id="five" value="5">
+    <input type="button" id="six" value="6">
+    <input type="button" id="multiply" value="*">
+    <br>
+    <input type="button" id="one" value="1">
+    <input type="button" id="two" value="2">
+    <input type="button" id="three" value="3">
+    <input type="button" id="subtract" value="-">
+    <br>
+    <input type="button" id="zero" value="0">
+    <input type="button" id="period" value=".">
+    <input type="button" id="add" value="+">
+    <input type="button" id="equal" value="=">
+</body>
+</html>
